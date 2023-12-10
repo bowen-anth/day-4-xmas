@@ -2,10 +2,9 @@
 import OpenAI from "openai"
 import { HfInference } from '@huggingface/inference'
 // openai.api_key = process.env.OPENAI_API_KEY
-const apiKey = OPENAI_API_KEY
-console.log(OPENAI_API_KEY)
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true })
-const hf = new HfInference(process.env.HUGGING_FACE_TOKEN)
+const hf = new HfInference(process.env.REACT_APP_HUGGING_FACE_TOKEN)
 
 // chat gpt api call for getJoke
 async function getJoke() {
