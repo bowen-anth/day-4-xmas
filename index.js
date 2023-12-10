@@ -2,7 +2,7 @@
 import OpenAI from "openai"
 import { HfInference } from '@huggingface/inference'
 const hf = new HfInference(process.env.HUGGING_FACE_TOKEN)
-const apiKey = process.env.OPENAI_API_KEY
+const apiKey = (process.env.OPENAI_API_KEY)
 
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
