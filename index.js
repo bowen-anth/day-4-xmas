@@ -3,7 +3,6 @@ import OpenAI from "openai"
 import { HfInference } from '@huggingface/inference'
 const hf = new HfInference(process.env.HUGGING_FACE_TOKEN)
 const apiKey = (process.env.OPENAI_API_KEY)
-
 const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
 // chat gpt api call for getJoke
@@ -28,16 +27,7 @@ const response = await hf.textGeneration({
 console.log("HF:", response)
 
 document.getElementById('window-container').addEventListener('click', function () {
-/**
- * 🎄 Challenge:
- * 1. When clicked, the doors should open
- *    to reveal a festive joke.
- * 
- * 🎁 hint.md for help!
- **/
- 
-
-    
+  //open doors
     document.querySelector('.left-door').style = "animation: left-open 0.3s forwards"
     document.querySelector('.right-door').style = "animation: right-open 0.3s forwards"
     document.querySelector('.joke-display').style = "animation: display-joke 0.3s forwards"
